@@ -1,0 +1,40 @@
+---
+title: "owner_EthanWanlass.Rmd"
+author: "Ethan Wanlass"
+date: "9/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Name? 
+Ethan Wanlass
+
+What do you tell people about your field of study at a party? 
+I'm a math major, I don't really tell people about my field of study, people tend not to like talking about it.  
+
+What are the three most important tools/strategies you use for organizing your work? 
+  - Keep clear concise paths, folders and filenames. 
+  - Space out your work. Easier to read makes work go faster. 
+  - Give outlines beforehand so you can figure out the main points you want to address. 
+
+Interesting fact about yourself? 
+I'm deaf in my left ear. 
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
