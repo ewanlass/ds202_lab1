@@ -5,17 +5,13 @@ date: "9/5/2019"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
+## Part 1
 
 Name? 
 Ethan Wanlass
 
 What do you tell people about your field of study at a party? 
-I'm a math major, I don't really tell people about my field of study, people tend not to like talking about it.  
+I'm a math major, I don't really tell people about my field of study; people tend not to like talking about it.  
 
 What are the three most important tools/strategies you use for organizing your work? 
   - Keep clear concise paths, folders and filenames. 
@@ -25,16 +21,78 @@ What are the three most important tools/strategies you use for organizing your w
 Interesting fact about yourself? 
 I'm deaf in my left ear. 
 
-```{r cars}
-summary(cars)
+## Understanding Concepts 
+
+You may work on this with your partner or individually. 
+
+  1. Explain the difference between Git and Github.
+     Git is on your local machine and is the tool that records your source code. Github records your work on a server, so both you and others can access it from anywhere (as long as it's        public)
+  
+  2. Can Git and Github be used independently? Why don't we do so? Describe the advantages and disadvantages. 
+     Yes. We don't do this because we want to be able to share our work among others and is easy to backup your work from git onto github. The one disadvantage is that you have to keep the      history of the code between the 2 the same, so it can be a bit of extra work to revert than it normally would.  
+
+  3. What is a repository in Git and how can you create a repository in Git (write out the command(s))? 
+  A repository is a storage space for your files that also keeps track of their history and how they change over time.
+  -git init
+  -git add (filenames)
+  -git commit
+  
+
+## Coding Exercises 
+
+  You may work on this with your partner or individually. 
+
+  1. Write code to count the total number of `NA` occurrences in the vector `X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)`.
+  
+```{r}
+x = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+length(which(is.na(x)))
+  
 ```
+  
 
-## Including Plots
+  2. Run the following code: 
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+  age = c(25,30,45,60,12,41)
+  smoker = c('T','F','T','F','F','F')
+  weight = c(120,137,0,168,91,142)
+  example_data = data.frame(age,smoker,weight)
+  weight[3] = 150
+  weight
 ```
+  This code took three vectors (`age`, `smoker`, and `weight`) and binded them together into an `R` object known as a 
+  `data.frame`. The advantage of `data.frame` is that it can handle vectors of different types. For example, age is a numeric 
+    vector but smoker status is a character vector (T or F). We named this `data.frame` as `example_data`. I obviously made a
+    data entry error: someone cannot have 0 weight. The correct weight should be 150 pounds. Write one line of code that can
+    easily correct this using the `[]` syntax. 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+  3. In the following I have two code snippets. Turn these code snippets into functions. Think about what each function does
+  and what you would name it. How many arguments does it need? 
+
+```{r}
+  na_mean = function(vector) {
+    return(mean(is.na(x)))
+  }
+```
+  One argument. 
+  
+```{r}
+  percentage_of_sum = function(vector) {
+    return(x / sum(x, na.rm = TRUE))
+  }
+```
+  One argument
+  
+4. Write a function named `both_na()`. This function take two vectors of the same length and returns the number of positions that have an `NA` value in both vectors. 
+
+```{r}
+  both_na = function(v1, v2) {
+    if (length(v1)==length(v2)){
+      return (length(which(is.na(v1[which(is.na(v2))]))))
+    }
+    else 
+      return ("Please give vectors of same length")
+  }
+```
