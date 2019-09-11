@@ -1,0 +1,18 @@
+---
+title: "partner_HaleyBraun.Rmd"
+author: "Haley Braun"
+date: "9/11/2019"
+output: html_document
+---
+
+  + Your (the "Partner's") full name and GitHub username: 
+      ewanlass, Ethan Wanlass
+      
+   + What did the Owner do in the most recent commit? 
+      Created the file and answered the questions and uploaded it to Git Hub What is the commit ID? 1a10310
+      
+   + Knit the Owner's `owner_YourName.Rmd`. Are you able to do so without error? 
+      Yes
+      
+   + Also include one tip for making Git/GitHub easier, or an error/difficulty you encountered. 
+      It was all pretty difficult to me but it would be easier if there was a Git/ GitHub cheat sheet.
